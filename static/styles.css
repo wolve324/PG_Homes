@@ -1,0 +1,273 @@
+/* General styling */
+/* CSS Variables for theme management */
+:root {
+  /* Corrected name */
+    --background-image: url('image_background_h.jpg');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    background: linear-gradient(135deg, #7b4397, #dc2430);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+h1, h2, {
+
+    margin: 0;
+}
+header h5 {
+    text-align: left;
+    margin-left: 20px; /* Adjust as needed */
+    display: block;
+    width: fit-content;
+}
+
+
+h1, h2 {
+    font-size: 2.2em;
+}
+
+
+
+}
+nav {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of tabs */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the left */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjusted margin for better spacing */
+}
+
+nav ul li a, .tab-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.tab-link.active, .tab-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+.tab-link:first-child {
+    margin-left: 20em; /* Adds space on the left of the first tab */
+}
+
+.right-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.right-container h3, .right-container h4 {
+    margin-right: 10px;
+}
+
+main {
+    flex-grow: 1;
+
+}
+
+.main-box {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-image: var(--background-image);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+
+}
+
+.main-box h1,h2,h3,h4,h5{
+    align-items: center;
+    text-align: center;
+}
+
+/* Tab content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.container {
+    margin-top: 2rem;
+
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form h1 {
+    grid-column: span 2;
+    font-size: 2rem;
+    color: #333;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], input[type="date"], select, input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"], .button-center {
+    background-color: #dc2430;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+button[type="submit"]:hover, .button-center:hover {
+    background-color: #7b4397;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #7b4397;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h5{
+    font-size: 0.73em;
+    }
+    h1, h2 {
+        font-size: 2.2em;
+    }
+    h3,h4{
+        font-size: 0.9em;
+        line-height: 0.9;
+        margin-right: 9px;
+        padding-right:rem;
+    }
+
+    nav ul li a, .tab-link {
+        font-size: 0.9rem;
+    }
+    .tab-link:first-child {
+        margin-left: 1em; /* Adds space on the left of the first tab */
+
+    form label {
+        font-size: 1rem;
+    }
+}
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    header h5 {
+        font-size: 8px; /* Reduce subheading size */
+    }
+
+    .right-container h3 {
+        font-size: 14px; /* Reduce contact details size */
+    }
+
+    header {
+        height: 100px; /* Reduce overall header height */
+        padding: 2px 5px; /* Reduce padding */
+    }
+        .tab-menu {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .tab-menu li {
+        font-size: 12px; /* Reduce tab text size */
+        padding: 5px 8px; /* Reduce padding */
+        margin: 0 3px; /* Reduce margin */
+    }
+
+    .tab-menu .tab-link {
+        padding: 8px 12px; /* Adjust button padding */
+    }
+}
+    nav ul {
+        flex-direction: row; /* Keep tabs in a row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Single column for form on smaller screens */
+    }
+
+    .tab-content {
+        padding: 1rem; /* Add padding to tab content */
+
+    }
+}
